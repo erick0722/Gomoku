@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, height=devide-height, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Gomoku</title>
+</head>
+
+<body style="background-color: rgb(187, 183, 179);">
+    <!-- Menu -->
+    <div class="box">
+        <h1>Gomoku!</h1>
+        <h2 id="msg">Welcome!</h2>
+        <input type="text" id="userName" name="userName">
+        <br>
+        <input type="submit" value="Edit" id="edit">
+        <br>
+   
+        <div class="roomBox">
+            <p>To start a new game, <br>click this button</p>
+            <button class="optionBtn" id="new">New Game</button>
+        </div>
+        <div class="roomBox">
+            <p>To join an existing game,<br>
+            enter someone's game code:</p>
+            <input type="text" id="roomID" name="roomID">
+         
+            <input type="submit" value="join" id="join">
+        </div>
+        <div class="roomBox">
+            <p>To start a random game, <br>click this button</p>
+            <button class="optionBtn" id="random">Random</button>
+        </div>
+    </div>
+    <div class="header" style="text-align: center; display: none;">
+        <div class="players" id='players'></div>
+        <div class="turn" id='turn'></div>
+    </div>
+    <!-- Game Board -->
+    <div class="board">
+        <div class="boardRow"></div>
+        <br>
+        <!-- Theme buttons -->
+        <div class="btnRow">
+            <button class="themeBtn" id="t1">Normal</button>
+            <button class="themeBtn" id="t2">Dark</button>
+            <button class="themeBtn" id="t3">Weird</button>
+        </div>
+    </div>
+
+    <!-- Script files -->
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="client.js"></script>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    
+</body>
+</html>
