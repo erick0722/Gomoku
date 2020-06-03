@@ -7,11 +7,12 @@ function onLoad(){
     var p1Color = 0; // Black
     var p2Color = 1; // White
 
-    // Create a new user
+    // Create a new user, or load the cookie if there is one
     socket.on('new', function(){
         if(document.cookie){
             var name = cookieName();
             $('#userName').val(name);
+            $('#msg').html("Welcome Back!");
             socket.emit('newCookie', name);
         }
         else{
